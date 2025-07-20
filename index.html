@@ -1,10 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello World</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Pribadi - Adithya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #fff;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-right: 20px;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+      min-height: 100vh;
+      animation: fadeIn 1.2s ease-in-out;
+      padding-top: 100px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 0 2rem;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #00ffff;
+      object-fit: cover;
+      box-shadow: 0 0 20px #00ffff;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      margin: 0.5rem 0;
+      color: #00ffff;
+    }
+
+    h2 {
+      color: #ade8f4;
+      border-bottom: 2px solid #00b4d8;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      line-height: 2;
+    }
+
+    .about p {
+      text-align: justify;
+      line-height: 1.8;
+    }
+
+    .contact p {
+      margin: 0.3rem 0;
+    }
+
+    .contact a {
+      color: #90e0ef;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      color: #00ffff;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: #00b4d8;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #00ffff;
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    /* Back to top button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 14px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ffff;
+      display: none;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+    #backToTop:hover {
+      background-color: #00b4d8;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+
+      nav .container {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin-right: 10px;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="container">
+      <div style="font-weight: bold; font-size: 1.2rem; color: #00ffff;">
+        Adithya Dandy Hendrawan
+      </div>
+      <div>
+        <a href="#tentang">Tentang</a>
+        <a href="#minat">Minat</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop" title="Kembali ke atas">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div class="overlay">
+    <header>
+      <div class="container">
+        <img src="images/profile.jpg" alt="Foto Profil" class="profile-pic" />
+        <h1>Adithya Dandy Hendrawan</h1>
+        <p>🎮 Gaming | 🎣 Fishing | 🌍 Travelling</p>
+      </div>
+    </header>
+
+    <section class="about" id="tentang">
+      <div class="container">
+        <h2>Tentang Saya</h2>
+        <p>
+          Saya adalah seorang mahasiswa Jurusan Sistem Informasi Universitas Merdeka Malang dan saat ini berada di semester 4. Di sela-sela kesibukan kuliah, saya juga bekerja di industri makanan laut. Dengan pendidikan ini, saya berharap dapat memperluas wawasan dan memperkuat karier saya di bidang teknologi informasi.
+        </p>
+      </div>
+    </section>
+
+    <section class="skills" id="minat">
+      <div class="container">
+        <h2>Aktivitas & Minat</h2>
+        <ul>
+          <li><i class="fas fa-briefcase" style="color: #48cae4; margin-right: 8px;"></i>Entrepreneur</li>
+          <li><i class="fas fa-mountain" style="color: #48cae4; margin-right: 8px;"></i>Hiking</li>
+          <li><i class="fas fa-fish" style="color: #48cae4; margin-right: 8px;"></i>Fishing</li>
+          <li><i class="fas fa-gamepad" style="color: #48cae4; margin-right: 8px;"></i>Gaming</li>
+        </ul>
+      </div>
+    </section>
+
+   
+<section class="education" id="pendidikan">
+  <div class="container">
+    <h2>Pendidikan</h2>
+    <ul>
+      <li><strong>Universitas Merdeka Malang</strong> – S1 Sistem Informasi (2022 - Sekarang)</li>
+      <li><strong>SMK Negeri 2 Purwodadi, Jateng</strong> – Jurusan TKJ</li>
+      <li><strong>SMP Negeri 2 Purwodadi, Jateng </strong></li>
+      <li><strong>SD Negeri 1 Talang Suko, Turen, Malang</strong></li>
+    </ul>
+  </div>
+</section>
+
+    <section class="contact" id="kontak">
+      <div class="container">
+        <h2>Kontak</h2>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/simpel.nick/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/hendrawan418" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+          <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=dandihendrawan34@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Adithya Dandy Hendrawan</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPT BACK TO TOP -->
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.onscroll = () => {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    backToTopBtn.onclick = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
 </body>
 </html>
